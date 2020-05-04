@@ -2,7 +2,7 @@ FROM tomcat:9-jre8
 
 LABEL maintainer="Geomati.co<info@geomati.co>"
 
-ENV SOS_VERSION 4.4.7
+ENV SOS_VERSION 5.0.2
 ENV SOS_INSTALL_DIR /usr/local/52n-sos
 
 # 52n-sos
