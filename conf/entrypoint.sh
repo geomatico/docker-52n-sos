@@ -19,6 +19,5 @@ fi
 addgroup --gid ${IMAGE_GID} tomcat && useradd -m -u ${IMAGE_UID} -g tomcat tomcat
 chown -R tomcat:tomcat .
 chown -R tomcat:tomcat ${SOS_INSTALL_DIR}
-chown -R tomcat:tomcat /usr/lib/oracle/11.2/client64
 
 su tomcat -c "/usr/local/tomcat/bin/catalina.sh run"

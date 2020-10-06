@@ -1,1 +1,1 @@
-docker build -t geomatico/52north-sos:5.0.2 -t geomatico/52north-sos:latest .
+docker build -t geomatico/52north-sos:5.3.1 -t geomatico/52north-sos:latest .

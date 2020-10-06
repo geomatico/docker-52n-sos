@@ -1,0 +1,27 @@
+version: '3.5'
+services:
+  postgis:
+    image: kartoza/postgis:10.0-2.4
+    container_name: postgis
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASS=postgres
+      - POSTGRES_DBNAME=sos
+      - ALLOW_IP_RANGE=0.0.0.0/0
+    volumes:
+      - ./volumes/postgis:/var/lib/postgresql
+
+  52n-sos:
+    image: geomatico/52north-sos:5.3.1
+    container_name: 52n-sos
+    restart: always
+    ports:
+      - 8080:8080
+    environment:
+      - CUSTOM_UID=1000
+      - CUSTOM_GID=1000
+    volumes:
+      - ./volumes/52n-sos:/usr/local/52n-sos/WEB-INF/config
